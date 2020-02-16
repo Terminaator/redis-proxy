@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 #sudo systemctl start redis-server
+#sudo systemctl stop redis-sentinel
 #sudo systemctl stop redis-server
 #import socket
 import time

@@ -10,17 +10,17 @@ var (
 	quit []byte = []byte("*1\r\n$4\r\nquit\r\n")
 )
 
-type State int
+type RedisState int
 
 const (
-	Connect State = iota
+	Connect RedisState = iota
 	Open
 	Close
 )
 
 type Redis struct {
 	conn  *net.TCPConn
-	state State
+	state RedisState
 }
 
 func (r *Redis) close() {
